@@ -1,0 +1,32 @@
+name: Auto Merge to main
+
+on:
+  push:
+    branches:
+      - claude/init-project-011CUr2ngypojNRNYAy9VLo3
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch main branch
+        run: git fetch origin main
+
+      - name: Merge to main
+        run: |
+            git checkout main
+            git merge origin/claude/init-project-011CUr2ngypojNRNYAy9VLo3 --no-edit || true
+            git push origin main
