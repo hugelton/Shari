@@ -146,15 +146,15 @@ h2, h3, h4, h5, h6 {
   display: inline-block;
   width: 3rem;
   height: 1.5rem;
-  
+
   input {
     opacity: 0;
     width: 0;
     height: 0;
-    
+
     &:checked + .toggle-slider {
       background-color: var(--toggle-handle);
-      
+
       &:before {
         transform: translateX(1.5rem);
         background-color: var(--toggle-bg);
@@ -173,7 +173,7 @@ h2, h3, h4, h5, h6 {
   background-color: var(--toggle-bg);
   transition: 0.3s;
   border-radius: 1rem;
-  
+
   &:before {
     position: absolute;
     content: "";
@@ -185,6 +185,11 @@ h2, h3, h4, h5, h6 {
     transition: 0.3s;
     border-radius: 50%;
   }
+}
+
+// Light mode: ON toggle handle should be white
+:root .toggle input:checked + .toggle-slider:before {
+  background-color: #ffffff;
 }
 
 // Text field - no rounded corners
@@ -350,29 +355,66 @@ h2, h3, h4, h5, h6 {
   text-align: center;
   font-weight: 500;
   transition: all 0.3s ease;
-  
+
   &.box-primary {
     background: var(--color-green);
     border-color: var(--color-green);
     color: white;
   }
-  
+
   &.box-success {
     background: var(--color-yellow);
     border-color: var(--color-yellow);
     color: white;
   }
-  
+
   &.box-warning {
     background: var(--color-red);
     border-color: var(--color-red);
     color: white;
   }
-  
+
   &.box-danger {
     background: var(--color-blue);
     border-color: var(--color-blue);
     color: white;
+  }
+
+  // Alignment modifiers
+  &.box-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.box-vcenter {
+    display: flex;
+    align-items: center;
+  }
+
+  &.box-hcenter {
+    display: flex;
+    justify-content: center;
+  }
+
+  &.box-top {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &.box-bottom {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &.box-left {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &.box-right {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
