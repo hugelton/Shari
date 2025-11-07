@@ -1,22 +1,26 @@
-name: Auto Merge All PRs
+name: Auto open & merge PRs
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches-ignore:
+      - main
 
 permissions:
   contents: write
   pull-requests: write
 
 jobs:
-  auto-merge:
+  open-and-merge:
     runs-on: ubuntu-latest
     steps:
-      - name: Auto-merge all PRs
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: ${{ github.ref_name }}
+          base: main
+          title: "Auto PR from ${{ github.ref_name }}"
+          body: "Automatic pull request."
+      - name: Auto-merge it
         uses: pascalgn/automerge-action@v0.15.6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MERGE_METHOD: merge        # または "squash" / "rebase"
-          MERGE_COMMIT_MESSAGE: automatic
-          MERGE_DELETE_BRANCH: true  # マージ後にブランチ削除
-          UPDATE_METHOD: merge
