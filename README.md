@@ -1,8 +1,8 @@
-# Hügelton Webtool Styles
+# Shari
 
 A lightweight CSS framework designed specifically for web editor tools, with a focus on Web MIDI API and Serial API applications. Features 20+ components with a minimalist design philosophy and Fibonacci-based spacing system.
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/hugelton/hugelton-webtool-styles)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/hugelton/shari)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Size](https://img.shields.io/badge/size-~12KB-orange.svg)](dist/)
 
@@ -22,33 +22,33 @@ A lightweight CSS framework designed specifically for web editor tools, with a f
 
 ```html
 <!-- Minified CSS (Production) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hugelton/hugelton-webtool-styles@main/dist/hugelton-webtool-styles.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hugelton/shari@main/dist/shari.min.css">
 
 <!-- or unpkg -->
-<link rel="stylesheet" href="https://unpkg.com/hugelton-webtool-styles@latest/dist/hugelton-webtool-styles.min.css">
+<link rel="stylesheet" href="https://unpkg.com/shari@latest/dist/shari.min.css">
 
 <!-- Expanded CSS (Development) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hugelton/hugelton-webtool-styles@main/dist/hugelton-webtool-styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hugelton/shari@main/dist/shari.css">
 ```
 
 ### npm
 
 ```bash
-npm install hugelton-webtool-styles
+npm install shari
 ```
 
 Then import in your HTML:
 
 ```html
-<link rel="stylesheet" href="node_modules/hugelton-webtool-styles/dist/hugelton-webtool-styles.min.css">
+<link rel="stylesheet" href="node_modules/shari/dist/shari.min.css">
 ```
 
 ### Download
 
-Download the latest release from the [releases page](https://github.com/hugelton/hugelton-webtool-styles/releases) and include it in your project:
+Download the latest release from the [releases page](https://github.com/hugelton/shari/releases) and include it in your project:
 
 ```html
-<link rel="stylesheet" href="path/to/hugelton-webtool-styles.min.css">
+<link rel="stylesheet" href="path/to/shari.min.css">
 ```
 
 ## Quick Start
@@ -60,7 +60,7 @@ Download the latest release from the [releases page](https://github.com/hugelton
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web MIDI App</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hugelton/hugelton-webtool-styles@main/dist/hugelton-webtool-styles.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hugelton/shari@main/dist/shari.min.css">
 </head>
 <body>
     <div class="p-3">
@@ -385,7 +385,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Credits
 
-Created for Hügelton web-based MIDI and audio tools.
+Created for Shari web-based MIDI and audio tools.
 
 ---
 
