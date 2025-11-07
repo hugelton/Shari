@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Hugelton Webtool Styles** is a CSS framework designed specifically for web editor tools, with a focus on Web MIDI API and Serial API applications. It provides a comprehensive component library with a minimalist design philosophy.
+**Shari** is a CSS framework designed specifically for web editor tools, with a focus on Web MIDI API and Serial API applications. It provides a comprehensive component library with a minimalist design philosophy.
 
 ## Development Commands
 
@@ -18,8 +18,8 @@ npm run serve     # Alias for preview
 ```
 
 ### Output Files
-- **dist/hugelton-webtool-styles.css** - Expanded CSS for development
-- **dist/hugelton-webtool-styles.min.css** - Minified CSS for production
+- **dist/shari.css** - Expanded CSS for development
+- **dist/shari.min.css** - Minified CSS for production
 
 ## Architecture
 
@@ -89,7 +89,7 @@ Two types of grid layouts:
 - `.panel` - Rounded containers with theme-aware backgrounds
 - `.grid` - Grid system (see Grid System section)
 - `.flex`, `.flex-column`, `.flex-center`, `.flex-between` - Flexbox utilities
-- `.float-menu` - Glassmorphic floating menu bar (Hügelton style)
+- `.float-menu` - Glassmorphic floating menu bar (Shari style)
 - `.header` - Sticky/fixed header component
 
 ### Status & Feedback
@@ -158,10 +158,10 @@ Designed for modern browsers with support for:
 
 Include the compiled CSS in your HTML:
 ```html
-<link rel="stylesheet" href="dist/hugelton-webtool-styles.min.css">
+<link rel="stylesheet" href="dist/shari.min.css">
 ```
 
 For development/debugging, use the expanded version:
 ```html
-<link rel="stylesheet" href="dist/hugelton-webtool-styles.css">
+<link rel="stylesheet" href="dist/shari.css">
 ```
