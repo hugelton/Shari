@@ -1,32 +1,22 @@
-name: Auto Merge to main
+name: Auto Merge All PRs
 
 on:
-  push:
-    branches:
-      - claude/init-project-011CUr2ngypojNRNYAy9VLo3
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
-  merge:
+  auto-merge:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Fetch main branch
-        run: git fetch origin main
-
-      - name: Merge to main
-        run: |
-            git checkout main
-            git merge origin/claude/init-project-011CUr2ngypojNRNYAy9VLo3 --no-edit || true
-            git push origin main
+      - name: Auto-merge all PRs
+        uses: pascalgn/automerge-action@v0.15.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_METHOD: merge        # または "squash" / "rebase"
+          MERGE_COMMIT_MESSAGE: automatic
+          MERGE_DELETE_BRANCH: true  # マージ後にブランチ削除
+          UPDATE_METHOD: merge
