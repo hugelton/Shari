@@ -385,7 +385,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Credits
 
-Created for Shari web-based MIDI and audio tools.
+Created for Hügelton web-based MIDI and audio tools.
 
 ---
 
