@@ -1046,7 +1046,7 @@ h2, h3, h4, h5, h6 {
 }
 .tooltip-text.tooltip-right:after {
   top: 50%;
-  left: -5px;
+  left: -10px;
   transform: translateY(-50%);
   border: 5px solid transparent;
   border-right-color: var(--button-bg);
@@ -1060,7 +1060,7 @@ h2, h3, h4, h5, h6 {
 }
 .tooltip-text.tooltip-left:after {
   top: 50%;
-  right: -5px;
+  right: -10px;
   transform: translateY(-50%);
   border: 5px solid transparent;
   border-left-color: var(--button-bg);
