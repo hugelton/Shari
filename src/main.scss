@@ -212,13 +212,13 @@ h2, h3, h4, h5, h6 {
   }
 }
 
-// Light mode: ON toggle background and handle
+// Light mode: ON toggle should invert colors (dark bg, white handle)
 :root .toggle input:checked + .toggle-slider {
-  background-color: var(--toggle-bg);
+  background-color: var(--black);
 }
 
 :root .toggle input:checked + .toggle-slider:before {
-  background-color: var(--black);
+  background-color: var(--white);
 }
 
 // Dark mode: ON toggle background should be lighter gray

@@ -182,11 +182,11 @@ h2, h3, h4, h5, h6 {
 }
 
 :root .toggle input:checked + .toggle-slider {
-  background-color: var(--toggle-bg);
+  background-color: var(--black);
 }
 
 :root .toggle input:checked + .toggle-slider:before {
-  background-color: var(--black);
+  background-color: var(--white);
 }
 
 [data-theme=dark] .toggle input:checked + .toggle-slider {
