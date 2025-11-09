@@ -17,7 +17,7 @@ A lightweight CSS framework designed specifically for web editor tools, with a f
 ## Installation
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hugelton/shari@main/dist/shari.min.css">
+<link rel="stylesheet" href="https://hugelton.github.io/Shari/docs/shari.min.css">
 ```
 
 ## Documentation
