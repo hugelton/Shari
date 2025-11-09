@@ -221,7 +221,11 @@ h2, h3, h4, h5, h6 {
   background-color: var(--black);
 }
 
-// Dark mode: ON toggle handle should be black
+// Dark mode: ON toggle background should be lighter gray
+[data-theme="dark"] .toggle input:checked + .toggle-slider {
+  background-color: #cccccc;
+}
+
 [data-theme="dark"] .toggle input:checked + .toggle-slider:before {
   background-color: var(--black);
 }
